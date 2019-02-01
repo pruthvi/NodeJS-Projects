@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="stylesheet" href="/public/style.css">
+        </head>
+              
+    <body>
+            Number of usres in list = <%= Object.keys(USERS_LIST).length %>
+            <br>
+            <form action="/users/add" method="POST">
+                First name:<input type="text" name="firstname" >
+                <br>
+                Last name: <input type="text" name="lastname" >
+                <br><br>
+                <input type="submit" value="Add">
+            </form> 
+            <table>
+            <%  for(let key in USERS_LIST) { %>
+                <tr>
+                        <td><%=key%>, <%=USERS_LIST[key]%> </td>
+                </tr>
+            <% }%>
+            </table>
+</body>
+</html>
