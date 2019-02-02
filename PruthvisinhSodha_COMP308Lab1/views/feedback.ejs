@@ -5,26 +5,35 @@
 
 </head>
 <body>
-
-        Welcome <h1><%=username %></h1>
-        
-        <form action="/thankyou" method="POST">
-        First Name:<br>
+                <div class="wrapper" style="position:relative">
+                                <div class="container">		
+        <h1> Welcome <b> <%=username %> </b> !</h1>
+            	
+        <form name="feedbackForm" action="/thankyou" method="POST">
+       <p>First Name:</p>
         <input type="text" name="fname" >
         <br>
-        Last Name :<br>
+        <p>Last Name : </p>
         <input type="text" name="lname" >
         <br>
-        Email :<br>
-        <input type="text" name="email" value="<%= username %>" >
+        <p>Email :</p>
+        <input type="text" name="email" value="<%= username %>"  disabled>
         <br>
-        Feedback :<br>
+        <p>Your Comments :</p>
         <textarea rows="4" cols="50" name="feedback">
         </textarea>
                 <br>
+                <p>Favorite Season : </p>
+                <input type="text" name="season" >
+                <br>
+                <p>Favorite Game : </p>
+        <input type="text" name="game" >
         <br>
+        
+                <br>
+
         <input type="submit" value="Send">
       </form> 
-
+</div></div>
 </body>
 </html>
