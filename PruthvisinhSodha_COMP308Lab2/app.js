@@ -7,8 +7,10 @@ const express = require('express');
 const app = express();
 
 const login = require('./routes/login');
+const signup = require('./routes/signup');
 const feedback = require('./routes/feedback');
 const thankyou = require('./routes/thankyou');
+const viewfeedback = require('./routes/viewfeedback');
 
 //adding express middleware to serve static pages - e.g style.css
 app.use("/public", express.static(__dirname+'/public'));
@@ -23,8 +25,11 @@ const env = process.env.DEPLOY || "dev";
 const conf=require('./config/'+env+".json");
 
 app.use('/', login);
+app.use('/signup', signup);
 app.use('/feedback', feedback);
 app.use('/thankyou', thankyou);
+app.use('/viewfeedback', viewfeedback);
+
 
 app.listen(conf.port);
 console.log("app started on port ", conf.port);
