@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" href="/public/style.css">
+        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/public/css/bootstrap-grid.min.css">
+</head>
+
+<body>
+        <div>
+                <a href="/">Home</a>
+        </div>
+        <script src="/public/js/bootstrap.bundle.min.js"></script>
+        <script src="/public/js/bootstrap.min.js"></script>
+        <br>
+        <form action="/add" method="POST" name="taskform" id="taskform">
+                <div>TaskId:
+                        <input type="text" name="taskId">
+                </div>
+                <div>Task name:
+                        <input type="text" name="taskName">
+                </div>
+                <div>Task Description:
+                        <input type="text" name="taskDescription" size="30">
+                </div>
+                <div>Priority:
+                        <input type="number" name="taskPriority">
+                </div>
+                <input type="submit" value="Add">
+        </form>
+</body>
+
+</html>
