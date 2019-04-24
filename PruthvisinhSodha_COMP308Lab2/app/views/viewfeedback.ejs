@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" href="/public/style.css">
+
+</head>
+
+<body>
+        <div class="wrapper">
+                <div class="container">
+                        <h1>Customer Feedbacks</h1>
+                        <table align="center" style=" margin: inherit;">
+                                <tr>
+                                        <th style="padding:5px">Email Address</th>
+                                        <th style="padding:5px">Feedback</th>
+
+                                </tr>
+                                <% data.user.forEach(item=> { %>
+                                <tr>
+                                        <form action="/" method="POST" name="viewFeedback" id="list">
+
+                                                <td>
+                                                        <input type="text" name="email" value="<%=item.email %>"
+                                                                size="20" disabled style="padding:5px">
+                                                </td>
+                                                <td>
+                                                        <input type="text" name="feedback" value="<%=item.feedback %>"
+                                                                size="30" disabled style="padding:5px">
+                                                </td>
+
+                                        </form>
+                                </tr>
+                                </tr>
+                                <% }) %>
+                        </table>
+                </div>
+        </div>
+</body>
+
+</html>

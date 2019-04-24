@@ -14,21 +14,13 @@ exports.render = function(req, res) {
 	});
 };
 
-exports.renderAddUser = function (req, res) {
+exports.renderSignup = function (req, res) {
     
     // Use the 'response' object to render the 'add_user' view with a 'title' property
-    res.render('add_user', {
-        title: 'Add User'
+    res.render('signup', {
+        title: 'Register'
     });
     //you may also render an html form
     //res.render('add_user.html');
 };
 
-exports.renderReadUser = function (req, res) {
-
-    // Use the 'response' object to render the 'read_user' view with a 'title' property
-    res.render('read_user', {
-        title: 'Read user by username'
-    });
-    
-};

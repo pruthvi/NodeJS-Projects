@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" href="/public/style.css">
+
+</head>
+
+<body>
+        <div class="wrapper" style="position:relative">
+                <div class="container">
+
+                        <form name="feedbackForm" action="/thankyou" method="POST">
+                                <p>First Name:</p>
+                                <input type="text" name="fname" value="<%= fname %>" >
+                                <br>
+                                <p>Last Name : </p>
+                                <input type="text" name="lname" value="<%= lname %>" >
+                                <br>
+                                <p>Email :</p>
+                                <input type="text" name="email" value="<%= email %>" >
+                                <br>
+                                <p>Favorite Season : </p>
+                                <input type="text" name="season" value="<%= season %>" >
+                                <br>
+                                <p>Favorite Game : </p>
+                                <input type="text" name="game" value="<%= game %>">
+                                <br>
+                                <p>Your Comments :</p>
+                                <textarea rows="4" cols="50" name="feedback"></textarea>
+                                <br>
+                                <br>
+                                <input type="submit" value="Send">
+                        </form>
+                </div>
+        </div>
+</body>
+
+</html>

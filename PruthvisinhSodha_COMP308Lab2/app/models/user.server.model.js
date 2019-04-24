@@ -4,58 +4,31 @@ const Schema = mongoose.Schema;
 
 // Define a new 'UserSchema'
 const UserSchema = new Schema({
-	firstName: String,
-	lastName: String,
+	fName: String,
+	lName: String,
 	email: {
 		type: String,
-		// Set an email index
 		index: true,
-		// Validate the email format
+		unique: true,
+		required: true,
 		match: /.+\@.+\..+/
 	},
-	username: {
-		type: String,
-		// Trim the 'username' field
-		trim: true,
-		// Set a unique 'username' index
-		unique: true,
-		// Validate 'username' value existance
-		required: true
-	},
+
 	password: {
 		type: String,
-		// Validate the 'password' value length
 		validate: [
-			(password) => password.length >= 6,
+			(password) => password.length >= 1,
 			'Password Should Be Longer'
 		]
 	},
-	website: {
+	season: {
 		type: String,
-		// Use a setter property to validate protocol existance in 'website' field
-		set: function(url) {
-			if (!url) {
-				return url;
-			} else {
-				if (url.indexOf('http://') !== 0 && url.indexOf('https://') !== 0) {
-					url = 'http://' + url;
-				}
-
-				return url;
-			}
-		}
 	},
-	role: {
+	game: {
 		type: String,
-		// Validate the 'role' value using enum list
-		enum: ['Admin', 'Owner', 'User']
-	},
-	created: {
-		type: Date,
-		// Create a default 'created' value
-		default: Date.now
 	}
 });
+
 
 // Set the 'fullname' virtual property
 UserSchema.virtual('fullName').get(function() {
@@ -85,5 +58,7 @@ UserSchema.set('toJSON', {
 	virtuals: true
 });
 
+
+
 // Create the 'User' model out of the 'UserSchema'
-mongoose.model('User', UserSchema);
+mongoose.model('student1', UserSchema);

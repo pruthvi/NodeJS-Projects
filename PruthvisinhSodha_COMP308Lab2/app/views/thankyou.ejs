@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" href="/public/style.css">
+
+</head>
+
+<body>
+        <div class="wrapper">
+                <div class="container">
+                        <h1>Thank You for providing feedback!</h1>
+                        <br><br>
+                        <h2>your feedback:</h2>
+                        <h3> <%= feedback %>
+                        </h3>
+
+                        <br><br>
+                        <form action="/home" method="GET" class="form" name="regForm">
+                                <input type="submit" value="Go to home" id="reg-button" style="color:black;">
+                              </form>
+                </div>
+        </div>
+</body>
+
+</html>

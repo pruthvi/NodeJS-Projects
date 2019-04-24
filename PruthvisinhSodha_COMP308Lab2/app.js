@@ -6,7 +6,7 @@
 const express = require('express');
 const app = express();
 
-const login = require('./routes/login');
+//const login = require('./routes/login');
 const signup = require('./routes/signup');
 const feedback = require('./routes/feedback');
 const thankyou = require('./routes/thankyou');

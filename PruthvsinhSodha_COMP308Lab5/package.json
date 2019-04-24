@@ -1,0 +1,17 @@
+{
+  "name": "pruthvsinhsodha_comp308lab5",
+  "version": "1.0.0",
+  "description": "You may use iris.js code for the assignment.",
+  "main": "iris.js",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.0.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "pruthvi",
+  "license": "ISC"
+}

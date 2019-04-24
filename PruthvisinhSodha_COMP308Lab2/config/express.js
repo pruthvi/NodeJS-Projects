@@ -19,6 +19,8 @@ module.exports = function() {
 		app.use(compress());
 	}
 
+	
+
 	// Use the 'body-parser' and 'method-override' middleware functions
 	app.use(bodyParser.urlencoded({
 		extended: true
@@ -46,7 +48,10 @@ module.exports = function() {
 	require('../app/routes/users.server.routes.js')(app);
 
 	// Configure static file serving
-	app.use(express.static('./public'));
+	app.use("/public",express.static('./public'));
+//	app.use("/public", express.static(__dirname+'/public'));
+// app.use(express.static('public'))
+
 
 	// Return the Express application instance
 	return app;

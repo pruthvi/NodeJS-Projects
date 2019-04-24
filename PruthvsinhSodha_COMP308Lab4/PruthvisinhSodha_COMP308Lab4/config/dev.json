@@ -1,0 +1,5 @@
+{
+    "port":"3000",
+    "booksvc": "http://localhost:3001/book",
+		"dburl":"mongodb://localhost:27017/comp308-wk10-db"
+}
