@@ -4,7 +4,7 @@
   "description": "You may use iris.js code for the assignment.",
   "main": "iris.js",
   "dependencies": {
-    "@tensorflow/tfjs": "^1.0.4",
+    "@tensorflow/tfjs": "^4.1.0",
     "express": "^4.16.4"
   },
   "devDependencies": {},
