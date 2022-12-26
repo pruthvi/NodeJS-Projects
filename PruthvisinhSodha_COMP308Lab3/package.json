@@ -46,6 +46,6 @@
     "concurrently": "3.1.0",
     "traceur": "0.0.111",
     "typescript": "2.0.3",
-    "typings": "1.4.0"
+    "typings": "2.1.1"
   }
 }
